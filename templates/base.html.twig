@@ -7,13 +7,42 @@
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
+            
         {% endblock %}
+
+        <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
+
+        <header>
+        
+        <a href="{{""}}" id="lienLogoAccueil"><img id="logoAccueil" src="{{asset('img/logoCoiffeur.png')}}" alt="logo coiffeurs"></a>
+        
+        <h1 id="nomDuSite">Site de vente entre coiffeurs</h1>
+
+        <input type="search" name="barreDeRecherche" id="barreDeRecherche" placeholder="Recherche">
+
+        <a href="" id="creationAnnonce">Créer une annonce</a>
+
+        <a href="" id="creationDeCompte">Se connecter</a>
+
+        
+        </header>
+
+
         {% block body %}{% endblock %}
+
+
+        <footer>
+            <h2>Tous Droits Reservés - Anthony André Dev &copy</h2>
+        </footer>
+
     </body>
 </html>
